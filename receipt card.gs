@@ -20,8 +20,13 @@ function receiptCardOnOpen(event) {
                   }
                   //Logger.log(prefills)
   let card = receiptCard(prefills)
+  let t =  testingee()
+  return [card.build()]
+}
 
-  return [CardService.newCardBuilder().setHeader(CardService.newCardHeader().setTitle("Testing")).build()]
+
+function  testingee(){
+  return CardService.newCardBuilder().setHeader(CardService.newCardHeader().setTitle("Testing"))
 }
 
 /**
@@ -30,17 +35,14 @@ function receiptCardOnOpen(event) {
  */
 function receiptCard(prefills) {
   Logger.log("receiptCard(prefills) called")
-  /*
-  let card = CardService.newCardBuilder()
+  
+  return CardService.newCardBuilder()
     .setHeader(
       CardService.newCardHeader()
         .setTitle("Enter Receipt")
     )
-    card.addSection(formSection(prefills))
-    return CardService.newCardBuilder().setHeader(CardService.newCardHeader().setTitle("Testing"))
-    */
-    return [CardService.newCardBuilder().setHeader(CardService.newCardHeader().setTitle("Testing")).build()]
-  
+    .addSection(formSection(prefills))
+    
 }
 
 /**
