@@ -1,0 +1,37 @@
+{
+  "timeZone": "America/New_York",
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/gmail.addons.execute",
+    "https://www.googleapis.com/auth/gmail.addons.current.message.readonly",
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive",
+    "https://www.googleapis.com/auth/userinfo.email"
+  ],
+  "gmail": {
+    "name": "Admin Tasks",
+    "logoUrl": "https://www.gstatic.com/images/icons/material/system/1x/receipt_black_24dp.png",
+    "contextualTriggers": [
+      {
+        "unconditional": {},
+        "onTriggerFunction": "receiptCardOnOpen"
+      }
+    ],
+    "openLinkUrlPrefixes": [
+      "https://docs.google.com/"
+    ],
+    "primaryColor": "#0000FF",
+    "secondaryColor": "#0000FF"
+  },
+  "dependencies": {
+    "libraries": [
+      {
+        "userSymbol": "ATL",
+        "version": "0",
+        "libraryId": "1xpm_5Ikn0TryRRvY6P29QlXivTxOzrPD9RlPBC4eEpN8wsAOcR6vudHL",
+        "developmentMode": true
+      }
+    ]
+  },
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8"
+}
