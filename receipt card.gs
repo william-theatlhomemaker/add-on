@@ -1,3 +1,9 @@
+
+
+function testError(){
+  return CardService.newCardBuilder().setHeader(CardService.newCardHeader().setTitle("test"))
+}
+
 /**
  * Returns the contextual add-on data that should be rendered for
  * the current e-mail thread. This function satisfies the requirements of
@@ -19,14 +25,8 @@ function receiptCardOnOpen(event) {
                   ref:hasRef(message)
                   }
                   //Logger.log(prefills)
-  let card = receiptCard(prefills)
-  let t =  testingee()
+  let card = receiptCard(prefills)//testError()//receiptCard(prefills)
   return [card.build()]
-}
-
-
-function  testingee(){
-  return CardService.newCardBuilder().setHeader(CardService.newCardHeader().setTitle("Testing"))
 }
 
 /**
@@ -43,7 +43,12 @@ function receiptCard(prefills) {
     )
     .addSection(formSection(prefills))
     
+    //return CardService.newCardBuilder().setHeader(CardService.newCardHeader().setTitle("test"))
+    
 }
+
+
+
 
 /**
  * Retrieves the current message given an action event object.
